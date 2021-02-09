@@ -1,0 +1,17 @@
+;***	MM.DEF - MasterMind linker definition file
+;*
+;*	(c) 1991, Benjamin W. Slivka
+;*
+
+NAME	       MastMind
+
+DESCRIPTION    'Master Mind (c) 1991, Benjamin W. Slivka'
+EXETYPE        WINDOWS
+STUB           'WINSTUB.EXE'
+CODE           PRELOAD MOVEABLE DISCARDABLE
+DATA           PRELOAD MOVEABLE MULTIPLE
+HEAPSIZE       1024
+STACKSIZE      8192
+
+EXPORTS        AboutDlgProc
+	       WndProc

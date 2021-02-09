@@ -1,0 +1,68 @@
+Windows MasterMind - Version 0.82
+15 July 1991
+
+\\bens\mastmind\mastmind.exe
+
+Hints: 1) Drag pegs out of the upper box onto the small black dots; when
+	  you have 4 pegs in place, the Guess button is enabled, and you
+	  can push that to test your Guess against the computers Code.
+	  [You can also push the right mouse button to Guess.]
+
+	  Little black and white pins give you feedback on your guess.
+	  You get one black pin for each peg that matches the computer's
+	  code in both color and position.  You get one white pin for each
+	  peg that matches the color of one of the computer's pegs, but is
+	  not in the matching position.
+
+       2) You can drag pegs both from the "Peg Well" and from any previous
+	  guesses.
+
+       3) You can rearrange pegs on the current guess.  They either move
+	  or swap, as appropriate
+
+       4) Once you have made at least one guess, you can double click on
+	  the guess row to copy the pegs down from the previous row.  This
+	  is especially useful once you have identified all the colors,
+	  as it avoids excess mousing.
+
+       5) You only get 10 guesses.
+
+
+TODO List
+----------------------------------------------------------------------------
+1)  Add 3D shaded appearance
+    * Use different shape for each peg color, for color-blind players!
+2)  Improve visuals when player wins/loses.  We do simple TextOut for now.
+3)  Add Help
+4)  Game Options
+    a)  Permit duplicate colors
+5)  On quit, show answer.  We already do for win/loss/new game.
+6)  Animate peg swaps
+7)  Do own cursor drawing to show peg moving
+
+Maybe List
+----------------------------------------------------------------------------
+1)  Keep game history statistics?
+2)  Add computer player
+3)  Allow more pegs in guess
+4)  On a loss, highlight all the pegs in all the guesses that generated
+    a black or white pin.  Could do this for a win, too!  Make this optional?
+
+Done List
+----------------------------------------------------------------------------
+15-Jul-1991 Right mouse button up (or Enter) simulate push of Guess button
+
+
+OPEN Bug List
+-------------
+<none>
+
+CLOSED Bug List
+---------------
+002 Computer code is not random (jimmo)
+    03-Jul-1991 Fixed.	Randomize at start-up with time of day.
+
+001 When game is one, disable moving (have flag that ignores mouse down?)
+    02-Jul-1991 Fixed.	Added flag to track when game was won.	Reset when
+		new game is started.  Disable mouse actions on pegs when flag
+		is set.
